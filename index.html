@@ -2,7 +2,7 @@
 <html lang="pt-br" ng-app="app">
   <head>
     <meta charset="utf-8">
-    <title>Todo Client</title>
+    <title>Os corre do dia</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/libs/angular.js"></script>
@@ -11,7 +11,7 @@
 
     <div class="todo" ng-controller="TodoController as todo">
       <form class="todo__form" ng-submit="todo.addTodo()">
-        <input type="text" placeholder="Add new todo" ng-model="todo.newTodo">
+        <input type="text" placeholder="Digita os bang que vc tem pa faze" ng-model="todo.newTodo">
       </form>
       <ul class="todo__list">
         <li ng-repeat="item in todo.list">
@@ -33,16 +33,15 @@
       </ul>
       <p class="todo__remaining">
         <span ng-hide="todo.getRemaining().length === 0">
-          You have {{todo.getRemaining().length}} of {{todo.list.length}} items todo!
+          tu tem uns {{todo.getRemaining().length}} de {{todo.list.length}} bang pa faze
         </span>
         <span ng-show="todo.getRemaining().length === 0">
-          You are super productive!
+          Cêé o bixaum memo hen doido!
         </span>
       </p>
     </div>
-    <center>
-      <small>double click in item to edit</small>
-    </center>
+    <small>*clica duas vez pa edita</small>
+
 
   <script src="js/app.js"></script>
   <script src="js/todo.controller.js"></script>

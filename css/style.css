@@ -16,6 +16,13 @@ ul {
   list-style: none;
 }
 
+small {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 8px;
+}
+
 .todo {
   position: relative;
   width: 350px;
@@ -125,6 +132,11 @@ input[type=checkbox] {
 
 input[type=checkbox]:checked + .toggle:after {
  opacity: 1;
+}
+
+input[type=checkbox]:checked ~ p {
+  text-decoration: line-through;
+  text-decoration-color: red;
 }
 
 .todo__list .toggle {
